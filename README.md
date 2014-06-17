@@ -4,10 +4,10 @@ Simple, slim, mini wrapper around git clone, git pull and tpope's pathogen.vim
 
 ## What is this?
 
-It's a piece of vimscript code which:
+It's a piece of vimscript which:
 - allows you to keep your list of plugins in vimrc
 
-- on vim startup, downloads any new plugins and activates them with pathogen (aka "Poor man's package manager")
+- on vim startup, downloads any new plugins and activates them with [pathogen][1] (aka "Poor man's package manager")
 
 - provides a `:UpdatePlugins` command
 
@@ -18,6 +18,8 @@ It's a piece of vimscript code which:
 
 ## Usage
 
+### Adding snippets in your vimrc
+
 1. copy the snippet (below) in your vimrc
 
 2. add any plugins you want (make sure you don't remove pathogen from the list, duh..), like so
@@ -27,8 +29,14 @@ It's a piece of vimscript code which:
   Pl 'tpope/vim-git'       'tpope/vim-markdown'   'tpope/vim-fugitive'
   ```
 
-3. run `:UpdatePlugins` when you feel like it
+3. restart vim - missing plugins will be fetched from github
 
+
+### Updating plugins
+
+1. run `:UpdatePlugins` when you feel like it
+
+### The snippet
 
 ```vim
 let g:plugin_dir = expand('~/.vim/bundle', ':p')
