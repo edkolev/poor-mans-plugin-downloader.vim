@@ -2,6 +2,9 @@
 
 Simple, slim, mini wrapper around git clone, git pull and tpope's pathogen.vim
 
+![screen shot 2014-06-17 at 9 53 38 pm](https://cloud.githubusercontent.com/assets/1532071/3305122/07c67c3c-f652-11e3-97f2-66ecd6cb9d6f.png)
+![screen shot 2014-06-17 at 9 59 59 pm](https://cloud.githubusercontent.com/assets/1532071/3305121/078bc3c6-f652-11e3-80c5-77f271912e8e.png)
+
 ## What is this?
 
 It's a piece of vimscript which:
