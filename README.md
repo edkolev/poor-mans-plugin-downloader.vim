@@ -2,7 +2,7 @@
 
 Simple, slim, mini wrapper around git clone, git pull and tpope's pathogen.vim
 
-# What is this?
+## What is this?
 
 It's a piece of vimscript code which:
 - allows you to keep your list of plugins in vimrc
@@ -11,29 +11,35 @@ It's a piece of vimscript code which:
 
 - provides a `:UpdatePlugins` command
 
-# What this isn't:
+## How does it work?
+
+- run `git clone` on vim startup for any missing plugins
+- run `git pull` for each plugin when `:UpdatePlugins` is executed
+
+## What this isn't:
 
 - a full blown vim package manager (whatever that is)
 
 - a pony
 
-# What this can't do:
+## What this can't do:
 
 - download plugins from anywhere but github
 
 - download plugins with anything but git
 
-# Usage
+## Usage
 
-1. copy the snippet in your vimrc
+1. copy the snippet (below) in your vimrc
 
-2. add any plugins you want (make sure you don't remove pathogen from the list, duh..)
-```vim
-Pl 'tpope/vim-repeat'
-Pl 'tpope/vim-sensible' 'tpope/vim-surround'
-```
+2. add any plugins you want (make sure you don't remove pathogen from the list, duh..), like so
+  ```vim
+  Pl 'tpope/vim-sensible'  'tpope/vim-commentary' 'tpope/vim-eunuch'
+  Pl 'tpope/vim-obsession' 'tpope/vim-tbone'      'tpope/vim-unimpaired'
+  Pl 'tpope/vim-git'       'tpope/vim-markdown'   'tpope/vim-fugitive'
+  ```
 
-3. use vim; run `:UpdatePlugins` when you feel like it
+3. run `:UpdatePlugins` when you feel like it
 
 
 ```vim
@@ -90,14 +96,14 @@ let g:pathogen_blacklist = filter(map(split(glob(g:plugin_dir . '/*', 1), "\n"),
 execute pathogen#infect(g:plugin_dir . '/{}')
 ```
 
-# Alternatives
+## Alternatives
 
 - [vim-plug][2]
 - [unbndle][3]
 - [Vundle][4]
 - [NeoBundle][5]
 
-# License
+## License
 
 DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
 
