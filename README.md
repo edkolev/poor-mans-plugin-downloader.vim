@@ -16,18 +16,6 @@ It's a piece of vimscript code which:
 - run `git clone` on vim startup for any missing plugins
 - run `git pull` for each plugin when `:UpdatePlugins` is executed
 
-## What this isn't:
-
-- a full blown vim package manager (whatever that is)
-
-- a pony
-
-## What this can't do:
-
-- download plugins from anywhere but github
-
-- download plugins with anything but git
-
 ## Usage
 
 1. copy the snippet (below) in your vimrc
@@ -95,6 +83,18 @@ execute "source " . g:plugin_dir . '/vim-pathogen/autoload/pathogen.vim'
 let g:pathogen_blacklist = filter(map(split(glob(g:plugin_dir . '/*', 1), "\n"),'fnamemodify(v:val,":t")'), '!has_key(g:plugin_hash, v:val)')
 execute pathogen#infect(g:plugin_dir . '/{}')
 ```
+
+## What this isn't:
+
+- a full blown vim package manager (whatever that is)
+
+- a pony
+
+## What this can't do:
+
+- download plugins from anywhere but github
+
+- download plugins with anything but git
 
 ## Alternatives
 
